@@ -1,0 +1,52 @@
+
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+
+<view class="userinfo">
+
+    <block >
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+</view>
+<view bindtap="shoucang" class="fenlei down">
+  <image class="icon" src='../../image/shoucang.png'></image>
+  <text>收藏</text>
+  <image class="jiantou" src='../../image/jinatou.png'></image>
+</view>
+<view bindtap="huiyuan" class="fenlei">
+  <image class="icon" src='../../image/huiyuan.png'></image>
+  <text>会员中心</text>
+  <image class="jiantou" src='../../image/jinatou.png'></image>
+</view>
+<view bindtap="baoming" class="fenlei">
+  <image class="icon" src='../../image/jianli.png'></image>
+  <text>报名信息</text>
+  <text wx:if="{{state==1}}" class="money {{state==1?'active':''}}">待完善</text>
+  <text wx:elif="{{state==0}}" class="money {{state==1?'active':''}}">待完善</text>
+  <image  wx:if="{{state==1}}" class="jiantou" src='{{tubiao1}}'></image>
+  <image  wx:elif="{{state==0}}" class="jiantou" src='{{tubiao}}'></image>
+</view>
+<view bindtap="dianhua" class="fenlei">
+  <image class="icon" src='../../image/lianxi.png'></image>
+  <text>联系我们</text>
+  <image class="jiantou" src='../../image/jinatou.png'></image>
+</view>
+<view bindtap="yijian" class="fenlei">
+  <image class="icon" src='../../image/fankui.png'></image>
+  <text>意见反馈</text>
+  <image class="jiantou" src='../../image/jinatou.png'></image>
+</view>
+<view bindtap='guanyu' class="fenlei">
+   <image class="dianhua" src='../../image/guanyu.png'></image>
+   <text>关于我们</text>
+   <image class="jiantou" src='../../image/jinatou.png'></image>
+</view>
+<!--广告栏位-->
+<view class='advertising'>
+  <view>传手小程序提供技术支持</view>
+  <view>电话热线：021-5763-0970</view>
+</view>
+

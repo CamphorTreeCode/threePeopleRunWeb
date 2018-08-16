@@ -1,0 +1,26 @@
+.shang {
+  height: 430rpx;
+}
+.shang image{
+  height: 400rpx;
+  width: 700rpx;
+  margin: 15rpx 25rpx;
+}
+.zhong, .xia {
+  background-color: #fff;
+  padding: 20rpx 0;
+}
+.zhong image {
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 10rpx 0 25rpx;
+}
+.zuo {
+  margin-left: 25rpx;
+}
+.you {
+  float: right;
+  margin-right: 25rpx;
+  color: #33A2FE;
+}

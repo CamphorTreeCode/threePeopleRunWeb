@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-component": "/utils/getUserTemplate/getUserTemplate"
+  },
+  "navigationBarTitleText": "会员中心"
+}

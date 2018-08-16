@@ -1,0 +1,37 @@
+<!--pages/applycenter/applycenter.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+<view class='header'>
+    <image src='/img/center/bmcg2.png'></image>
+    <text>报名成功</text>
+</view>
+
+
+<scroll-view scroll-y="true"  style='height:{{scrollHeight}}px' class="scoll-h"   bindscrolltolower="lower">
+<view class='content'  wx:for='{{applicantList}}' catchtap='companyJobDetails' data-id="{{applicantList[index].companyJobId}}" data-index='{{index}}' >
+    <view wx:if='{{item.isInvalid==1}}'>
+      <image class='aw' src='/img/center/bmcg.png'></image>
+      <text class='tat'>报名成功</text>
+    </view>
+    <view class='shixiao' wx:else> 已失效 </view>
+    
+    <view wx:for='{{item.companyJob}}' wx:for-item="ll">
+       {{ll.company.companyName}}
+    </view>
+    <view class='txt'><text wx:for='{{item.companyJob[0].jobLabels}}' wx:for-item="j">{{j}}</text></view>
+    <view class='img'>
+      <image src='/img/center/dingwei.png'></image><text>{{item.companyJob[0].company.companyAddress}}</text></view>
+    <view class='price'><text >{{item.companyJob[0].jobSalaryMin}}-{{item.companyJob[0].jobSalaryMax}}</text>/月</view>
+</view>
+<!--没有数据暂无数据  -->
+<view class="spinner cl" hidden='{{showLoading}}'>
+  <view class="rect1"></view>
+  <view class="rect2"></view>
+  <view class="rect3"></view>
+  <view class="rect4"></view>
+  <view class="rect5"></view>
+</view>
+<view class="bottomText cl" hidden='{{bottomText}}'>已经到底了</view>
+</scroll-view>

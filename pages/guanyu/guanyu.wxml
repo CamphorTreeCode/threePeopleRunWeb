@@ -1,0 +1,20 @@
+
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+
+<image class="shang" src='{{aboutUsimg}}' mode="aspectFill"></image>
+
+<view class='clear'></view> 
+<view class='zhong'>
+  <image class='icon' src='/image/gongsi.png'></image>
+  <text>张杰职介</text>
+</view>
+<view class='xia'>
+  <image class='icon' src='/image/xiangqing.png'></image>
+  <text>简介</text>
+</view>
+<view class='down'>
+    {{aboutUsContent}}
+</view>

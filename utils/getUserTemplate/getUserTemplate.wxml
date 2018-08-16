@@ -1,0 +1,14 @@
+<!--utils/getUserTemplate/getUserTemplate.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+<view class='shade' hidden="{{showSQ}}"></view>
+<slot></slot>
+<view class="userGet {{noneShowButton?'wux-notification--in':''}}"  hidden="{{showSQ}}">
+<view class="userTitle lf">张杰职介请求用户授权</view>
+<view class="userBut ri">
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>
+</view>
+</view>

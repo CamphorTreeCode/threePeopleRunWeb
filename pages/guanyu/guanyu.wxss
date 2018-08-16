@@ -1,0 +1,38 @@
+page {
+  background-color: #fff;
+}
+.shang {
+  height: 400rpx;
+  width: 100%;
+  float: left;
+}
+.clear {
+  clear: both;
+} 
+.zhong{
+  border: 1rpx soled red;
+  background-color: #fff;
+  padding: 40rpx 0;
+  border-top: 15rpx solid #F2F2F2;
+  border-bottom: 15rpx solid #F2F2F2;
+}
+.xia{
+  background-color: #fff;
+  padding: 20rpx 0;
+  border-bottom: 4rpx solid #F2F2F2;
+}
+.zhong image,
+.xia image {
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin: 0 15rpx 0 30rpx;
+  vertical-align: text-bottom;
+}
+.down {
+  height: 100%;
+  background-color: #fff;
+  padding: 30rpx;
+  color: #9A9A9A;
+  line-height: 2rem;
+}

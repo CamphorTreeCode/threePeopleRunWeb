@@ -1,0 +1,41 @@
+page {
+  background-color: #f5f5f5;
+}
+.xia {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #9A9A9A;
+
+}
+.img-one{
+  margin:0 20rpx;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+}
+.dian {
+  margin-right: 18%;
+}
+.dian view {
+  margin: 20rpx 0;
+}
+.zzz {
+  font-size: 0.9rem;
+  color: #343434;
+}
+.img-two{
+  width:30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-right: 6rpx;  
+}
+.daohang{
+  text-align: center;
+}
+.img-three{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 15rpx 0;
+}

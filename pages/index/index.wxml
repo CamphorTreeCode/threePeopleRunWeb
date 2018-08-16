@@ -1,0 +1,180 @@
+<!--pages/index/index.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+
+<!-- 头部轮播 -->
+ <!-- <scroll-view scroll-y="false" style='height:100%' bindscroll='azv,bindscro' scroll-top='{{abba}}'  bindscrolltolower="lower" bindscrolltoupper='up'>   -->
+<view>
+<view class="swiper-container">
+  <swiper circular='true' current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+    <block wx:for="{{HomeSwiper}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item.swiperImages}}" class="img" data-id="{{item.companyJobId}}" catchtap='shopDetails' mode='aspectFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="dots">
+    <block wx:for="{{HomeSwiper}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+<!-- 头部轮播 -->
+
+<!-- 头部分类 -->
+<view class='classification'> 
+  <view bindtap='fanli' wx:for="{{homeNavigation}}"  data-index="{{index}}">
+    <image src='{{item.homeNavigationIcon}}'> </image>
+    <text>{{item.homeNavigationName}}</text>
+  </view>
+  <!-- <view bindtap='zuixin'>
+    <image src='/img/index/zuixin.png'> </image>
+    <text>今日最新</text>
+  </view>
+  <view bindtap='bendi'>
+    <image src='/img/index/bendi.png'> </image>
+    <text>本地招聘</text>
+  </view>
+  <view bindtap='mingqi'>
+    <image src='/img/index/mingqi.png'> </image>
+    <text>名企招聘</text>
+  </view> -->
+</view>
+<!-- 头部分类 -->
+
+ <view class='returnfee' catchtap='mendian'>
+  <image src='/img/index/fafei.png'></image>
+  <text>门店导航</text>
+  <image src='/img/index/xiangiqng.png'></image>
+</view> 
+
+<!-- 返费通知start-->
+<view class='returnfee' catchtap='returnfee'>
+  <image src='/img/index/fafei.png'></image>
+  <text>奖励通知</text>
+  <image src='/img/index/xiangiqng.png'></image>
+</view>
+<!-- 返费通知end -->
+
+<!-- 优职推荐start -->
+<view class='change'>
+  <view class='top'>
+    <image src='/img/index/zan.png'></image>
+    <text>优职推荐</text>
+    <text catchtap='changeJob'>换一批</text>
+    <image src='/img/index/huanyipi.png' catchtap='changeJob'></image>
+  </view>
+  <!-- 2张卡片 -->
+  <view class='content'>
+    <!-- style='background:url({{item.url}}) 100% ' -->
+    <view class='mingpian' wx:for='{{goodJob}}' catchtap='jobDetails' data-id='{{goodJob[index].companyJobId}}'>
+      <view>{{item.company.companyName}}</view>
+      <view>
+        <text wx:for='{{item.jobLabels}}' wx:for-item="idx" wx:if="index<=1">{{idx}}</text>
+      </view>
+      <view>{{item.jobSalaryMin}}-{{item.jobSalaryMax}}/月</view>
+    </view>
+  </view>
+</view>
+<!-- 优职推荐end -->
+
+<!-- 底部分类 -->
+<view class='foter' >
+<!-- -->
+  <view class='waw'  catchtouchmove="true" wx:if='{{gao!=0}}'  style='height:{{clientY}}px' >
+    <swiper class='dingwei' bindchange='gaibain' current='{{curren}}' style=' height:{{gao}}rpx' duration='0'>
+      <swiper-item  class='active' data-index='{{index}}'>
+        <text wx:for='{{leixing}}' wx:for-item="idx" class='ass  {{idx.state==1?"beijing":""}}' catchtap='textdianji' data-ind='{{index}}'>{{idx.jobCategoryName}}              </text>
+        <button data-in='leixing' catchtap='btn'>确认</button>
+      </swiper-item>
+       <swiper-item class='active' data-index='{{index}}'>
+
+        <text wx:for='{{jine}}' wx:for-item="idx" class='ass {{index==pricex?"beijing":""}}' catchtap='textdiana' data-ia='{{index}}'>{{idx.name}}  </text>
+        <button data-in='jine' catchtap='btn'>确认</button>
+      </swiper-item>
+      <swiper-item class='active' data-index='{{index}}'>
+        <text wx:for='{{hezong}}' wx:for-item="idx" class='ass {{idx.state==1?"beijing":""}}' catchtap='textdianb' data-ib='{{index}}'>{{idx.name}} </text>
+        <button data-in='address' catchtap='btn'>确认</button>
+      </swiper-item>
+      <swiper-item class='active' data-index='{{index}}'>
+        <view class='xingbie'>性别要求</view>
+        <view>
+          <text wx:for='{{xingbie}}' catchtap='textdian'  class='ass {{selectsx==index?"beijing":""}}' data-id='{{index}}'>{{item.name}}            </text>
+          <!-- <text>男可做</text>
+          <text>女可做</text> -->
+        </view>
+        <view class='gongzi'>工资范围</view>
+        <view class='gongz'>
+          <input id="min" placeholder="" bindinput="inputTyping" value="{{jobSalaryMin}}"> </input><image src='/img/center/hengxian.png'></image><input placeholder="" id="max" bindinput="inputTyping" value="{{jobSalaryMax}}"></input>
+        </view>
+        <button data-in='saixuan' catchtap='btn'>确认</button>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 占位置 -->
+  <view class='zhanwei'>
+  
+  </view>
+  <!-- 占位置 -->
+  <view class='top-head'  bindtap='huidaotop' style='position:{{post}} ;top:{{0}}px'>
+    <view bindtap='sanlei' class='{{xuanze==0?"activeshow":""}}' >
+      <image src='/img/index/xiala.png'></image>
+      类型
+    </view>
+    <view bindtap='sanprice' class='{{xuanze==1?"activeshow":""}}'>
+      <image src='/img/index/xiala.png'></image>
+      奖励金额
+    </view>
+    <view bindtap='sanzong' class='{{xuanze==2?"activeshow":""}}'>
+      <image src='/img/index/xiala.png'></image>
+      综合排序
+    </view>
+    <view bindtap='sanshai' class='{{xuanze==3?"activeshow":""}}'>
+      <image src='/img/index/xiala.png'></image>
+      筛选
+    </view>
+  </view>
+  <!--显示列表  -->
+
+  <view class='bottom'>
+    <view class="mingpian {{item.jobStick==1?'zhiding':''}}" wx:for='{{shopList}}' data-id="{{item.companyJobId}}" catchtap='xiangqing'>
+      <view class='left'>
+      <view class='boty'>{{item.jobCategory.jobCategoryName}}</view>
+        <image mode='aspectFill' src='{{item.jobSwiperImages[0]}}'></image>
+      </view>
+      <view class='right'>
+        <view>{{item.company.companyName}}</view>
+        <view>
+          <text wx:for='{{item.jobLabels}}' wx:for-item="idx">{{idx}}</text>
+        </view>
+        <view>奖励{{item.returnMoney}}</view>
+        <view>{{item.jobSalaryMin}}-{{item.jobSalaryMax}}/月</view>
+      </view>
+    </view>
+  </view>
+<!--没有数据暂无数据  -->
+<view class="spinner cl" hidden='{{showLoading}}'>
+  <view class="rect1"></view>
+  <view class="rect2"></view>
+  <view class="rect3"></view>
+  <view class="rect4"></view>
+  <view class="rect5"></view>
+</view>
+<view class="bottomText cl" hidden='{{bottomText}}'>已经到底了</view>
+
+</view>
+</view>
+<!-- 底部分类 -->
+
+<!-- 填写报名信息 -->
+<!-- <view class='danchuang' style='display:{{dcancel}}'>
+  <image mode='scaleToFill' src='/img/index/baomingbiao.png'></image>
+  <text class='twt1'>是否去填写报名信息？</text>
+  <text class='twt2'>报名信息用于报名企业</text>
+  <view class='btn1' catchtap='dcancel'>取消</view>
+  <view class='btn2' catchtap='dconfirm'>确认</view>
+</view> -->
+  <!-- </scroll-view> -->

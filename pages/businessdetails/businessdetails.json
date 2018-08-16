@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-component": "/utils/getUserTemplate/getUserTemplate"
+  },
+    
+  "navigationBarTitleText": "企业简介"
+}

@@ -1,0 +1,68 @@
+/* 头像背景 */
+.userinfo {
+  background: url(https://www.chuanshoucs.com/ServerImg/2018-05-28/78f8422b-c356-4a0b-a4c1-39349d067453.png) no-repeat center center;
+  background-size: cover;
+  height: 350rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.userinfo image {
+  display: inline-block; 
+  border-radius: 50%;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+}
+/* 列表 */
+.fenlei {
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3rpx;
+  background-color: #fff;
+  position: relative;
+}
+.icon {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 30rpx 0 30rpx;
+}
+.jiantou {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 5%;
+}
+.money {
+  position: absolute;
+  right: 13%;
+  font-size: 30rpx;
+  color: #34A1FE;
+}
+.dianhua {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 30rpx 0 30rpx;
+}
+.active {
+    display: none;
+}
+
+.advertising{ 
+    position: fixed; 
+    bottom: 3%; 
+    color: #ccc; 
+    font-size: 0.7rem; 
+    width: 100%;
+}
+.advertising view{ 
+    text-align: center;
+}

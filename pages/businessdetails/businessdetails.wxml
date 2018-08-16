@@ -1,0 +1,18 @@
+<!--pages/businessdetails/businessdetails.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+<view class='header'>
+  <image mode='aspectFill' src='{{company.companyImage}}'></image>
+</view>
+<view class='top'>
+<image mode='aspectFill' src='/img/postdetails/xiangqing.png'></image>
+<text>简介</text>
+</view>
+<view class='content'>
+  <text>
+  {{company.companyIntroduction}}
+  <!-- 安徽美芝制冷设备有限公司（AMCC）,是广东没得电器股份有限公司和国际知名企业日本东芝组建的中外合资企业。公司于2008年2于注册成立，投资4.9亿元，注册资本3.25亿元 -->
+  </text>
+</view>

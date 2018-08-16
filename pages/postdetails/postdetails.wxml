@@ -1,0 +1,217 @@
+<!--pages/postdetails/postdetails.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+<!-- 引入富文本 -->
+<import src="/wxParse/wxParse.wxml" />
+
+<!-- 阴影遮罩层 -->
+<view class='waw' wx:if='{{gao!=0}}'>
+</view>
+<!-- 头部轮播 -->
+<swiper indicator-dots='true' indicator-active-color='#33A1FF' indicator-color='white' circular='true'>
+  <swiper-item wx:for='{{companyJob[0].jobSwiperImages}}'>
+    <image mode='aspectFill' src='{{item}}'> </image>
+  </swiper-item>
+</swiper>
+<!-- 头部轮播 -->
+
+<!-- 类别信息 -->
+<view class='leixing'>
+  <view class='lei'>
+    <image src='/img/postdetails/gongsi.png'></image>
+    <text>{{companyJob[0].company.companyName}}</text>
+    <!-- <text>返{{companyJob[0].returnMoney}}</text> -->
+    <text>{{companyJob[0].returnMoney==0?"":'奖励'+companyJob[0].returnMoney}}</text>
+  </view>
+  <view class='lei'>
+    <image src='/img/postdetails/gongzi.png'></image>
+    <text>工资</text>
+    <text>{{companyJob[0].jobSalaryMin}}-{{companyJob[0].jobSalaryMax}}月</text>
+  </view>
+  <view class='lei' wx:if="{{companyJob[0].manageCost!=0}}">
+    <image src='/img/postdetails/gongzi.png'></image>
+    <text>管理费</text>
+    <text>{{companyJob[0].manageCost}}元</text>
+  </view>
+  
+  <view class='lei'>
+    <image src='/img/postdetails/leixing.png'></image>
+    <text>招聘类型</text>
+    <text>{{companyJob[0].jobCategory.jobCategoryName}}</text>
+  </view>
+  <view class='lei'>
+    <image src='/img/postdetails/ren.png'></image>
+    <text>招聘人数</text>
+    <text>{{companyJob[0].jobRecruitsCount==-1?"不限":companyJob[0].jobRecruitsCount}}</text>
+  </view>
+  <view class='lei'>
+    <image src='/img/postdetails/dizhi.png'></image>
+    <text>地区</text>
+    <text>{{companyJob[0].company.companyAddress}}</text>
+  </view>
+  <view class='lei'>
+    <image src='/img/postdetails/xingbie.png'></image>
+    <text>性别</text>
+    <text>{{companyJob[0].jobRecruitsGender==0?'男':companyJob[0].jobRecruitsGender==1?'女':'男女不限'}}</text>
+  </view>
+  <view class='lei'>
+    <image src='/img/postdetails/shijian.png'></image>
+    <text>发布时间</text>
+    <text>{{companyJob[0].createTime}}</text>
+  </view>
+  <view class='lei' catchtap='tiaozhuan' data-id="{{companyJob[0].company.companyId}}">
+    <image src='/img/postdetails/gongsi.png'></image>
+    <text>企业简介</text>
+    <image src='/img/index/xiangiqng.png'></image>
+  </view>
+  <!-- 标签 -->
+  <view class='title'>
+    <text wx:for='{{companyJob[0].jobLabels}}'>{{item}}</text>
+  </view>
+  <!-- 职位描述 -->
+  <view class='position'>
+    <view class='lei'>
+      <image src='/img/postdetails/renshu.png'></image>
+      <text>职位描述</text>
+    </view>
+    <view class='wenzi'>
+      <template is="wxParse" data="{{wxParseData:article1.nodes}}" />
+      <!-- 《合肥格力空调》男女不限年龄16-45岁，车费150元，不用体检费，出名单需在职，当天安排宿舍，纹身烟疤临时身份证无磁都可以搞定 -->
+    </view>
+  </view>
+  <!-- 温馨提示-->
+  <view class='position'>
+    <view class='lei'>
+      <image src='/img/postdetails/wenxin.png'></image>
+      <text>温馨提示</text>
+    </view>
+    <view class='wenzi'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      <!-- 《合肥格力空调》男女不限年龄16-45岁，车费150元，不用体检费，出名单需在职，当天安排宿舍，纹身烟疤临时身份证无磁都可以搞定 -->
+      <!-- （张杰职介只在门面或电话报名，广场，地铁站 公交车站没有接站点，忘大家不要被骗！)车费150自理免体检费。当天安排宿舍 -->
+    </view>
+  </view>
+  <!-- 联系电话 -->
+  <view class='lei' catchtap='phoneCall' data-val="{{companyJob[0].recruitersTelphone}}">
+    <image src='/img/postdetails/lianxi.png'></image>
+    <text>联系电话</text>
+    <text>{{companyJob[0].recruitersTelphone}}</text>
+  </view>
+  <!-- 感兴趣用户 -->
+  <view class='lei liulan'>
+    <image src='/img/postdetails/lianlian.png'></image>
+    <text>感兴趣的人</text>
+    <text>{{companyJob[0].jobBrowser}}</text>
+    <image src='/img/postdetails/liulanliang.png'></image>
+  </view>
+  <!-- 感兴趣用户头像 -->
+  <view class='touxiang'>
+    <view class='t_top'>
+      <image mode='aspectFill' wx:for="{{browser}}" src='{{item.user.avatarUrl}}'></image>
+    </view>
+    <image class='last' mode='aspectFill' src='/img/postdetails/shenglue.png'></image>
+  </view>
+
+</view>
+<!-- 类别信息 -->
+
+<!-- 底部信息 -->
+
+<view class='foter'>
+  <view class='dianhua' catchtap='shouye'>
+    <image mode='aspectFill' src='/img/postdetails/shouye.png'></image>
+  </view>
+  <view class='dianhua' catchtap='shoucan' data-id="{{companyJob[0].companyJobId}}" data-collectionId="{{collectionId}}" wx:if="{{isInvalid==1}}">
+    <image mode='aspectFill' src='{{shouimg}}'></image>
+  </view>
+  <view class='baoming' bindtap='baoming' wx:if="{{isApplicant==false && isInvalid==1}}">
+    <image mode='aspectFill' src='/img/postdetails/baoming.png'></image>
+    <form bind:submit="testSubmit" report-submit="true">
+    <button   formType="submit">报名</button>
+    </form>
+  </view>
+  <view class='baoming baoming2' wx:if="{{isApplicant==true && isInvalid==1}}" catchtap='yibaoming'>
+    已报名
+  </view>
+  <!-- <view class='baoming' wx:if="{{isInvalid==1}}"> -->
+  <view class='baoming' wx:if="{{isInvalid==1}}" catchtap='zhuanfa'>  
+    <image mode='aspectFill' src='/img/postdetails/zhuanfa.png'></image>
+    <!-- <button open-type='share'>转发</button> -->
+     <button>转发</button> 
+  </view>
+  <view class='shixiao' wx:if="{{isInvalid==0}}">已失效</view>
+
+  <!-- 已收藏显示 -->
+  <view class='show' wx:if="{{xianshi==1}}">
+    <image mode='aspectFill' src='/img/postdetails/yishoucang.png'></image>
+    <text>已收藏</text>
+  </view>
+  <!-- 未收藏显示 -->
+  <view class='show' wx:if="{{xianshi==0}}">
+    <image mode='aspectFill' src='/img/postdetails/quxiaoshoucang.png'></image>
+    <text>取消收藏</text>
+  </view>
+ 
+
+
+  
+</view>
+
+
+  <!--转发&生成海报start-->
+  <view wx:if='{{zhuanfa==false}}' class='tankuang'>
+    <view class='flex-one'>
+      <button openType="share" class='hen'>
+        <image mode='aspectFill' src="/img/postdetails/wechat.png"></image>
+        <view>分享给朋友</view>
+      </button>
+      <button bindtap="getGoodsQrcode" class='hen'>
+        <image mode='aspectFill' src="/img/postdetails/erweima.png"></image>
+        <view>生成职位海报</view>
+      </button>
+      <button catchtap="shareModalClose" class='close'>关闭</button>
+    </view>
+  </view>
+  <!--转发&生成海报end-->
+
+  <view wx:if="{{haibao==false}}" class="canvas" style='width:{{width}}px;height:{{height}}px'>
+    <image mode='aspectFill' src="/img/postdetails/cha.png" catchtap='closeHaiBao'></image>
+    <canvas canvas-id="shareCanvas" disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" catchtap='preview_img'></canvas>
+    <!-- <button catchtap="saveImage" class='btn' >保存图片</button> -->
+    <view class='dibu'>点击预览大图就可以了保存至相册</view>
+    <view class='dibu aaa'>您可以分享到朋友圈或者好友啦</view>
+  </view>
+
+
+<!-- 去报名 -->
+  <view class='hide' wx:if='{{xinxi==1}}'>
+    <image mode='aspectFit' src='/img/postdetails/youjian.png'></image>
+    <view class='text'>是否将报名信息提交</view>
+    <view class='dibu1' catchtap='Bquxiao'>
+      <text>取消</text>
+    </view>
+    <view class='dibu2' catchtap='Bqueren' data-id='{{companyJob[0].companyJobId}}'>
+      <text>确认</text>
+    </view>
+  </view>
+  <!-- 去完善信息 -->
+  <view class='hide' wx:if='{{xinxi==0}}'>
+    <image mode='aspectFit' src='/img/postdetails/youjian.png'></image>
+    <view class='text'>请完善报名信息</view>
+    <view class='dibu1' catchtap='Wquxiao'>
+      <text>取消</text>
+    </view>
+    <view class='dibu2' catchtap='Wqueren'>
+      <text>确认</text>
+    </view>
+  </view>
+  <!-- 已提交信息 -->
+  <view class='hidden' wx:if='{{hidden==false}}'>
+    <image mode='aspectFit' src='/img/postdetails/youjian.png'></image>
+    <view class='text'>已提交</view>
+  </view>
+
+
+<view class='shade' style='display:{{shade}}' disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></view>

@@ -1,0 +1,252 @@
+/* pages/bendi/bendi.wxss */
+
+/* 底部分类 */
+.foter{
+  position: relative;
+  /* fixed */
+}
+.zhiding{
+  background: url("https://www.chuanshoucs.com/ServerImg/2018-05-28/0c13b495-3c37-4627-a1b2-a063f4e42c8e.png") no-repeat top;
+  background-position-x: 95%;
+  background-size: 8%;
+}
+.waw{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+ z-index: 9; 
+   background: rgba(0, 0, 0, 0.5); 
+}
+.ass{
+   border: 1rpx solid #999; 
+}
+.dingwei{
+  width: 100%;
+  position: absolute;
+  /* height: 560rpx;  */
+  padding-bottom: 20rpx;
+  top: 111rpx;
+  left: 0;
+  z-index: 10;
+  color: #999;
+  overflow: hidden; 
+
+}
+.dingwei button{
+  width: 200rpx;
+  position: absolute;
+  bottom: 40rpx;
+  left: 50%;
+  background: #33A1FF;
+  color: white;
+  font-size: 34rpx;
+  margin-left: -100rpx;
+  border-top-left-radius: 70rpx;
+  border-top-right-radius: 70rpx;
+  border-bottom-left-radius: 70rpx;
+  border-bottom-right-radius: 70rpx;
+  border: 0;
+}
+.active{
+  /* padding-top: 10rpx; */
+  background: white;
+  /* box-shadow:5px 5px 10px #ccc; */
+  border-bottom-left-radius: 90rpx;
+  border-bottom-right-radius: 90rpx;
+}
+
+.active text{
+  display: inline-block;
+  
+  /* color: #999; */
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+}
+
+.beijing{
+  background: #DAEDFE;
+  color: #33A1FF ;
+  border: 1px solid white !important;
+}
+
+.foter .top-head{
+  position: fixed;
+  top: 0;
+  width: 94%;
+  padding: 20rpx 3%;
+  color:#999999;
+  background: white;
+  z-index: 10;
+}
+
+.foter .top-head view{
+  display: inline-block;
+  position: relative;
+  width: 19.4%;
+  margin: 0 2.7%;
+  background: #F5F5F5;
+  text-align: center;
+  font-size: 26rpx;
+  padding: 18rpx 0;
+  border-radius: 10rpx;
+  /* color: #999999; */
+}
+
+.activeshow{
+  color: #33A1FE;
+  border: 1rpx solid #33A1FE;
+}
+
+.foter .top-head image{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -10rpx;
+  width: 20rpx;
+  height: 15rpx;
+}
+.zhanwei{
+  height: 80rpx;
+  width: 100%
+}
+
+.bottom{
+  /* margin-top: 80rpx; */
+  padding: 25rpx 0;
+}
+.bottom .left{
+  overflow: hidden;
+  display: inline-block;
+  width: 30%;
+  height: 200rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+.bottom .left .boty{
+position:absolute;
+bottom:0;
+width:100%;
+color: white;
+text-align:center;
+background: rgba(0, 0, 0, 0.5);
+}
+
+.bottom .left image{
+  width: 100%;
+  height: 100%;
+}
+
+.bottom .right{
+  display: inline-block;
+  width: 65%;
+  margin-left: 5%;
+}
+.bottom  .mingpian{
+  width: 90%;
+  padding: 0 5%;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  border-top: 1rpx solid #F2F2F2;
+}
+.bottom  .right>view{
+  margin: 20rpx 0;
+}
+
+
+/* 设置卡片title的边框颜色和背景颜色 */
+
+.bottom  .mingpian text{
+  background: #FEF8D4;
+  border: 1rpx solid #FFBE36;
+  color: #FFBE36;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+  margin-right: 10rpx;
+}
+
+.bottom  .mingpian view:nth-of-type(3){
+  color: red;
+  font-weight:700
+}
+
+.bottom  .mingpian view:nth-of-type(4){
+  color: #FE7C42;
+  font-weight: bold;
+}
+/*
+.bottom .mingpian:nth-of-type(1),
+.bottom .mingpian:nth-of-type(2),
+.bottom .mingpian:nth-of-type(3){
+  background: url("https://www.chuanshoucs.com/ServerImg/2018-05-28/0c13b495-3c37-4627-a1b2-a063f4e42c8e.png") no-repeat top;
+  background-position-x: 95%;
+  background-size: 8%;
+} 
+*/
+
+
+
+.active {
+  /* padding-top: 10rpx;  */
+  background: white;
+  /* box-shadow:5px 5px 10px #ccc; */
+  border-bottom-left-radius: 90rpx;
+  border-bottom-right-radius: 90rpx;
+}
+
+.active .xingbie, .active .gongzi, .active .gongz {
+  padding-left: 30rpx;
+}
+
+.active .gongzi {
+  margin-bottom: 20rpx;
+}
+
+.ass {
+  border: 1rpx solid #999;
+}
+
+.active text {
+  display: inline-block;
+  /* color: #999; */
+  border-radius: 10rpx;
+  padding: 5rpx 20rpx;
+  margin: 20rpx ;
+  font-size: 34rpx;
+  /* margin-left: 40rpx; */
+}
+
+.active input {
+  height: 40rpx;
+  display: inline-block;
+  width: 150rpx;
+  border: 1rpx solid #999;
+  padding: 5rpx 15rpx;
+  border-radius: 20rpx;
+  margin-right: 70rpx;
+}
+.active .gongz {
+  position: relative;
+  line-height: 60rpx;
+}
+.gongz image {
+  position: absolute;
+  top: 50%;
+  margin-top: -5rpx;
+  left: 226rpx;
+  width: 40rpx;
+  height: 4rpx;
+}
+.xuanfu {
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+}
+.xuanfu image {
+  width: 100rpx;
+  height: 100rpx
+}

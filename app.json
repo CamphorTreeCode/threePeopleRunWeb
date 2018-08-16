@@ -1,0 +1,61 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/me/me",
+    "pages/classification/classification",
+    "pages/applycenter/applycenter",
+    "pages/identical/identical",
+    "pages/returnfee/returnfee",
+    "pages/bendi/bendi",
+    "pages/postdetails/postdetails",
+    "pages/businessdetails/businessdetails",
+    "pages/shouye/shouye",
+    "pages/fenye/fenye",
+    "pages/shenqing/shenqing",
+    "pages/shoucang/shoucang",
+    "pages/huiyuan/huiyuan",
+    "pages/baoming/baoming",
+    "pages/yijian/yijian",
+    "pages/guanyu/guanyu",
+    "pages/mendian/mendian"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "张杰职介总店",
+    "navigationBarTextStyle":"black"
+    
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#AAAAAA",
+    "backgroundColor": "#fff",
+    "selectedColor": "#34A1FE",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/shouye.png",
+        "selectedIconPath": "image/shouye2.png"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "image/fenlei.png",
+        "selectedIconPath": "image/fenlei2.png"
+      },
+      {
+        "pagePath": "pages/applycenter/applycenter",
+        "text": "申请中心",
+        "iconPath": "image/shenqing.png",
+        "selectedIconPath": "image/shenqing2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "image/wo.png",
+        "selectedIconPath": "image/wo2.png"
+      }
+    ]
+  }
+}

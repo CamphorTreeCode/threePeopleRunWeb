@@ -1,0 +1,41 @@
+/* pages/identical/identical.wxss */
+/* 引入富文本 */
+ @import "/wxParse/wxParse.wxss"; 
+.header{
+  padding: 30rpx 60rpx;
+  font-size: 32rpx;
+  position: relative;
+  border-top: 1rpx solid #f2f2f2;
+  border-bottom: 10rpx solid #f2f2f2;
+}
+.header image{
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 50%;
+  left: 60rpx;
+  margin-top: -17.5rpx;
+}
+.header text{
+  margin-left: 55rpx;
+  color: #33A1FF; 
+}
+
+.content .fenlei{
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+/* .content .fenlei view{
+  text-align: center;
+  font-size: 32rpx;
+  width: 33.3%;
+  display: inline-block;
+} */
+
+.lei view:nth-of-type(1),
+.lei view:nth-of-type(3){
+  color: #999;
+}
+.lei view:nth-of-type(2){
+  color: #FE6A22;
+}

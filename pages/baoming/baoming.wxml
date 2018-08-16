@@ -1,0 +1,74 @@
+<!--遮罩-->
+<my-component>
+</my-component> 
+<!--遮罩-->
+<form bindsubmit="formSubmit">
+  <view class='section xingming'>
+    <image src='/image/xingming.png'></image>
+    <text>姓名</text>
+    <input type='text' placeholder='填写你的姓名(必填)' name='applicantName' value='{{applicantList.applicantName}}'></input>
+  </view>
+  <view class='section dianhua'>
+    <image src='/image/lianxifangshi.png'></image>
+    <text>联系电话</text>
+    <input type='text' placeholder='填写你的联系电话(必填)' name='applicantPhoneNo' value='{{applicantList.applicantPhoneNo}}'></input>
+  </view>
+  <view class='section'>
+    <image src='/image/xingbie.png'></image>
+    <text>性别</text>
+    
+    <radio-group bindchange="xingbie" name='applicantGender'> 
+      <view class="flex_box" > 
+        <view class="flex_item">
+          <image style="display:{{radioCheckVal==0?'block':''}}" src='/image/xiajiantou.png'></image>
+          <label class="{{radioCheckVal==0?'active':''}}">
+          <radio value="0"  hidden="true"/>男
+          </label> 
+        </view> 
+        <view class="flex_item">
+          <image style="display:{{radioCheckVal==1?'block':''}}" src='/image/xiajiantou.png'></image>
+          <label class="{{radioCheckVal==1?'active':''}}"> 
+          <radio value="1" hidden="true"/>女
+          </label> 
+        </view> 
+      </view> 
+    </radio-group> 
+  </view>
+  
+  <view class='section'>
+    <image src='/image/rili.png'></image>
+    <text>出生日期</text>
+    <picker mode="date" value="{{date}}" start="1900-09-01" end="{{dateTime}}" bindchange="bindDateChange" name='applicantBirthday'>
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+    <image class='you' src='/image/jinatou.png'></image>
+  </view>
+  
+  <view class='section address'>
+    <image src='/image/dizhi.png'></image>
+    <text>现住址</text>
+    <textarea placeholder='请填写你的现地址' maxlength='60' name='applicantAddress' value='{{applicantList.applicantAddress}}'></textarea>
+  </view>
+  <view class='section shenfen'>
+    <image src='/image/shenfen.png'></image>
+    <text>身份证号</text>
+    <input type='text' placeholder='填写你的身份证号(必填)' name='applicantIDCardNo' value='{{applicantList.applicantIDCardNo}}'></input>
+  </view>
+  <!-- <view class='section dianhua'>
+    <image src='/image/zhengzhi.png'></image>
+    <text>政治面貌</text>
+    <input type='text' placeholder='填写你的政治面貌' name='applicantEducation' value='{{applicantList.applicantEducation}}'></input>
+  </view> -->
+  <view class='section address'>
+    <image src='/image/pingjia.png'></image>
+    <text>自我评价</text>
+    <textarea placeholder='填写你对自己的评价' maxlength='70' name='applicantEvaluation' value='{{applicantList.applicantEvaluation}}'></textarea>
+  </view>
+  <view class='kong'></view>
+  <view class='kong'>
+    <button form-type='submit'>保存</button>
+  </view>
+  <view class='kong'></view>
+</form>

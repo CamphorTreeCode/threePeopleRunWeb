@@ -1,0 +1,23 @@
+<!--pages/identical/identical.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+<!-- 引入富文本 -->
+<import src="/wxParse/wxParse.wxml" />
+<view class='header'>
+  <image src='/img/postdetails/gongsi.png'></image>
+  <text>{{fanfei.company.companyName}}</text>
+</view>
+
+<view class='content'>
+  <!-- <view class='fenlei'>
+    <view>姓名</view>
+    <view>返费金额</view>
+    <view>返费日期</view>
+  </view>  -->
+    <view class='fenlei lei'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    <!-- <rich-text nodes="{{fanfei.content}}"></rich-text> -->
+  </view>
+</view>

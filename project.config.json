@@ -1,0 +1,125 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.1.1",
+	"appid": "wx7786b678789f848c",
+	"projectname": "%E5%BC%A0%E6%9D%B0%E8%81%8C%E4%BB%8B%E5%8F%91%E5%B8%83%E7%89%88",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 13,
+			"list": [
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "详情页",
+					"pathName": "pages/postdetails/postdetails",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "企业简介",
+					"pathName": "pages/businessdetails/businessdetails",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "返费通知",
+					"pathName": "pages/returnfee/returnfee",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/classification/classification",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "本地",
+					"pathName": "pages/bendi/bendi",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "报名表",
+					"pathName": "pages/baoming/baoming",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "会员中心",
+					"pathName": "pages/huiyuan/huiyuan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我",
+					"pathName": "pages/me/me",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "申请中心",
+					"pathName": "pages/applycenter/applycenter",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "岗位详情",
+					"pathName": "pages/postdetails/postdetails",
+					"query": ""
+				},
+				{
+					"id": 11,
+					"name": "测是从小程序吗",
+					"pathName": "pages/index/index",
+					"query": "scene=45"
+				},
+				{
+					"id": -1,
+					"name": "门店",
+					"pathName": "pages/mendian/mendian",
+					"query": ""
+				},
+				{
+					"id": 13,
+					"name": "2",
+					"pathName": "pages/shenqing/shenqing",
+					"query": ""
+				}
+			]
+		}
+	}
+}

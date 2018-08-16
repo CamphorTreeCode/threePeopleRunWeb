@@ -1,0 +1,509 @@
+/* pages/index/index.wxss */
+
+
+/* 头部轮播start */
+swiper{
+  height: 450rpx;
+}
+.zhiding{
+  background: url("https://www.chuanshoucs.com/ServerImg/2018-07-17/fa0b00a4-a740-4d71-b1d9-a1bd65d40a1e.png") no-repeat top;
+  background-position-x: 95%;
+  background-size: 20%;
+}
+swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+swiper-container{  
+  position: relative;  
+}  
+.swiper-container .swiper{  
+  height: 450rpx;  
+}
+.swiper-container .swiper .img{  
+  width: 100%;  
+  height: 100%;  
+}
+.swiper-container .dots{  
+  position: absolute;  
+  right: 40rpx;  
+  top: 400rpx;  
+  display: flex;  
+  justify-content: center;  
+}
+.swiper-container .dots .dot{  
+  margin: 0 8rpx;  
+  width: 17rpx;
+  height: 17rpx;  
+  background: #fff;  
+  border-radius: 8rpx;  
+  transition: all .6s;  
+}  
+.swiper-container .dots .dot.active{  
+  width: 40rpx;  
+  background: #33A1FF;  
+}  
+/* 头部轮播end */
+/*  头部分类  */
+.classification{
+  /* border-top: 12rpx solid #F2F2F2; */
+  border-bottom: 12rpx solid #F2F2F2;
+ padding: 25rpx 0;
+}
+.classification view{
+    width: 25%;
+    text-align: center;
+    display: inline-block;
+}
+
+.classification view image{
+  width: 120rpx;
+  height: 120rpx;
+  display: block;
+  margin-left: 40rpx;
+}
+
+.classification view text{
+  font-size: 30rpx;
+  color: #333;
+}
+
+/*  头部分类  */
+
+/* 返费通知 */
+.returnfee{
+  padding: 35rpx 20rpx;
+  position: relative;
+  border-bottom: 12rpx solid #F2F2F2;
+}
+.returnfee image:nth-of-type(1){
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -15rpx;
+  left: 30rpx;
+}
+.returnfee image:nth-of-type(2){
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -20rpx;
+  right: 30rpx;
+}
+.returnfee text{
+  font-size: 32rpx;
+  color: #333;
+  margin-left: 70rpx;
+}
+/* 返费通知 */
+
+
+/* 换一批 */
+.change{
+  border-bottom: 12rpx solid #F2F2F2;
+}
+
+.top{
+  padding: 20rpx 20rpx;
+  position: relative;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+
+.top image:nth-of-type(1){
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -20rpx;
+  left: 30rpx;
+}
+.top image:nth-of-type(2){
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -18rpx;
+  right: 150rpx;
+}
+.top text:nth-of-type(1){
+  font-size: 32rpx;
+  margin-left: 70rpx;
+  color: #33A1FF;
+  font-weight: bold;
+}
+.top text:nth-of-type(2){
+  font-size: 32rpx;
+  color: #333;
+  position: absolute;
+  top: 50%;
+  margin-top: -20rpx;
+  right: 30rpx;
+}
+.change .content{
+  padding: 20rpx 20rpx;
+}
+.change .content .mingpian{
+  width: 43%;
+  margin: 0 2.5%;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  padding-left: 2%;
+  box-shadow:2px 2px 5px #ccc;
+}
+.change .content .mingpian>view{
+  margin: 15rpx 0;
+}
+.change .content .mingpian>view:nth-of-type(1){
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+width: 70%;
+}
+/* 设置背景图片 */
+.change .content .mingpian:nth-of-type(2){
+  background: url("https://www.chuanshoucs.com/ServerImg/2018-05-28/80d2eced-1aff-4e46-a1dd-4bddd31e9ad0.png") 100%;
+}
+.change .content .mingpian:nth-of-type(1){
+  background: url("https://www.chuanshoucs.com/ServerImg/2018-05-28/ce9670cd-022c-48d8-a9be-31b81d300f39.png") 100%;
+}
+/* 设置卡片title的边框颜色和背景颜色 */
+
+.change .content .mingpian text{
+  background: #FEF8D4;
+  border: 1rpx solid #FFBE36;
+  color: #FFBE36;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+  margin-right: 10rpx;
+}
+.change .content .mingpian view:nth-of-type(4){
+  color: #FE7C42;
+  font-weight: bold;
+}
+/* 换一批 */
+
+/* 底部分类 */
+.foter{
+  position: relative;
+  /* fixed */
+}
+.waw{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+   z-index: 9; 
+}
+
+.dingwei{
+  padding-top: 10rpx;
+  font-size: 34rpx;
+  width: 100%;
+  position: absolute;
+  /* height: 560rpx;  */
+  padding-right: 2%;
+  padding-bottom: 20rpx;
+  top: 96rpx;
+  left: 0;
+  z-index: 10;
+  color: #999;
+   overflow: hidden; 
+}
+.dingwei button{
+  width: 200rpx;
+  position: absolute;
+  bottom: 40rpx;
+  left: 50%;
+  background: #33A1FF;
+  color: white;
+  font-size: 34rpx;
+  margin-left: -100rpx;
+  border-top-left-radius: 70rpx;
+  border-top-right-radius: 70rpx;
+  border-bottom-left-radius: 70rpx;
+  border-bottom-right-radius: 70rpx;
+  border: 0;
+}
+.active{
+  /* padding-top: 10rpx; */
+  background: white;
+  /* box-shadow:5px 5px 10px #ccc; */
+  border-bottom-left-radius: 90rpx;
+  border-bottom-right-radius: 90rpx;
+}
+.ass{
+border: 1rpx solid #999;
+}
+
+.active text{
+  display: inline-block;
+  /* color: #999; */
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+  margin-left: 35rpx;
+  margin-top: 30rpx;
+}
+
+.beijing{
+  background: #DAEDFE;
+  color: #33A1FF ;
+  border: 1rpx solid white;
+}
+
+
+.foter .top-head{
+  width: 94%;
+  padding: 20rpx 3%;
+  color:#999999;
+  background: white;
+  z-index: 10;
+  /* position: relative;  */
+}
+
+.foter .top-head view{
+  display: inline-block;
+  position: relative;
+  width: 19.4%;
+  margin: 0 2.7%;
+  background: #F5F5F5;
+  text-align: center;
+  font-size: 26rpx;
+  padding: 18rpx 0;
+  border-radius: 10rpx;
+  /* color: #999999; */
+}
+.activeshow{
+  color: #33A1FE;
+  border: 1rpx solid #33A1FE;
+}
+
+.foter .top-head image{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -10rpx;
+  width: 20rpx;
+  height: 15rpx;
+}
+
+.bottom{
+  padding: 20rpx 0;
+}
+.bottom .left{
+  overflow: hidden;
+  display: inline-block;
+  width: 30%;
+  height: 200rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+.bottom .left .boty{
+position:absolute;
+bottom:0;
+width:100%;
+color: white;
+text-align:center;
+background: rgba(0, 0, 0, 0.5);
+}
+
+.bottom .left image{
+  width: 100%;
+  height: 100%;
+}
+.bottom .right{
+  display: inline-block;
+  width: 65%;
+  margin-left: 5%;
+}
+.bottom  .mingpian{
+  width: 90%;
+  padding: 0 5%;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  /* padding-left: 2%; */
+  border-top: 1rpx solid #F2F2F2;
+}
+.bottom  .right>view{
+  margin: 20rpx 0;
+}
+/* .bottom  .mingpian>view:nth-of-type(1){
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+width: 70%;
+} */
+
+/* 设置卡片title的边框颜色和背景颜色 */
+
+.bottom  .mingpian text{
+  background: #FEF8D4;
+  border: 1rpx solid #FFBE36;
+  color: #FFBE36;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+  margin-right: 10rpx;
+}
+.bottom  .mingpian view:nth-of-type(3){
+  color: red;
+   
+}
+.bottom  .mingpian view:nth-of-type(4){
+  color: #FE7C42;
+  font-weight: bold;
+}
+/* .bottom .mingpian:nth-of-type(1),
+.bottom .mingpian:nth-of-type(2),
+.bottom .mingpian:nth-of-type(3){
+  background: url("https://www.chuanshoucs.com/ServerImg/2018-05-28/0c13b495-3c37-4627-a1b2-a063f4e42c8e.png") no-repeat top;
+  background-position-x: 95%;
+  background-size: 8%;
+} */
+/* 是否去填写报名信息 */
+.danchuang{
+  width: 70%;
+  height: 400rpx;
+  background: white;
+  position: fixed;
+  top: 45%;
+  margin-top: -200rpx;
+  left: 50%;
+  margin-left: -35%;
+  z-index: 99;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.danchuang image{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  margin-left: -50rpx;
+}
+
+.danchuang .btn1{
+  color: white;
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  left: 0;
+  background: #9AD0FF;
+}
+.danchuang .btn2{
+  color: white;
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  right: 0;
+  border-radius: 0;
+  background: #33A1FF;
+}
+
+.danchuang .twt1{
+  position: absolute;
+  top: 45%;
+  display: block;
+  width: 100%;
+  font-size: 34rpx;
+  text-align: center;
+}
+.danchuang .twt2{
+  position: absolute;
+  top: 60%;
+  display: block;
+  width: 100%;
+  font-size: 30rpx;
+  color: #999;
+  text-align: center;
+}
+
+
+
+.active {
+   /* padding-top: 10rpx;   */
+  background: white;
+  /* box-shadow:5px 5px 10px #ccc; */
+  border-bottom-left-radius: 90rpx;
+  border-bottom-right-radius: 90rpx;
+}
+
+.active .xingbie, .active .gongzi, .active .gongz {
+  padding-left: 30rpx;
+}
+
+.active .gongzi {
+  margin-bottom: 20rpx;
+}
+
+
+
+.active text {
+  display: inline-block;
+  /* color: #999; */
+  border-radius: 10rpx;
+  padding: 5rpx 20rpx;
+  margin: 20rpx 0;
+  margin-left: 40rpx;
+  font-size:32rpx;
+}
+.active:nth-of-type(2) text{
+ margin-left:24rpx; 
+}
+
+.active input {
+  height: 40rpx;
+  display: inline-block;
+  width: 150rpx;
+  border: 1rpx solid #999;
+  padding: 5rpx 15rpx;
+  border-radius: 20rpx;
+  margin-right: 70rpx;
+}
+
+.active .gongz {
+  position: relative;
+  line-height: 60rpx;
+}
+
+
+.gongz image {
+  position: absolute;
+  top: 50%;
+  margin-top: -5rpx;
+  left: 226rpx;
+  width: 40rpx;
+  height: 4rpx;
+}
+
+Page {
+  /* background: #1baceb; */
+  position: absolute;
+  font-size: 36rpx;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #FAFAFA;
+   /* overflow-y: hidden;  */
+}
+/* .waw swiper-item:nth-of-type(1){
+height: 400rpx !important;
+padding-bottom: 120rpx;
+overflow-y: auto;
+}
+.waw swiper-item:nth-of-type(1) button{
+bottom: -50rpx !important;
+} */

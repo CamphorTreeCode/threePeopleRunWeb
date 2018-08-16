@@ -1,0 +1,15 @@
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+<view class='shang' >
+  <image src='https://www.chuanshoucs.com/ServerImg/2018-05-28/dc2b1393-fba9-4dff-9484-06d4d512ef3e.png'></image>
+</view>
+ <view class='zhong'>
+  <image src='/image/huiyuan.png'></image>
+  <text>会员号</text>
+</view>
+<view class='xia'>
+  <text class='zuo'>{{number}}</text>
+  <text class='you' bindtap='fuzhi' data-index='{{number}}'>复制</text>
+</view> 

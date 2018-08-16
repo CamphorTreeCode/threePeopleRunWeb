@@ -1,0 +1,85 @@
+/* utils/getUserTemplate/getUserTemplate.wxss */
+.lf{
+ float: left
+}
+.cl{
+  clear:both;
+}
+.ri{
+  float: right;
+}
+
+
+.shade{ width: 100%; height: 100%; position: fixed; background:#000; top: 0; left: 0; opacity:0.5;z-index:999;
+}
+.userGet{
+   position: fixed; 
+   top: 0;
+   z-index: 999;
+   width:99%;
+   height: 100rpx;
+   background: #fff;
+   opacity:0.95;
+   margin-left: 0.5%;
+   border-bottom-left-radius: 15px;
+border-bottom-right-radius: 
+15px;
+-webkit-transition:.4s;
+transition:.4s;
+-webkit-transform:translate3d(0, -100%, 0);
+transform:translate3d(0, -100%, 0);
+
+
+}
+.userTitle{
+  line-height:  100rpx;
+  font-size: 0.8rem;
+  padding-left:4%;
+
+}
+.userBut{
+  height: 100%;
+  width:31%;
+}
+.userBut button{
+height:100%;
+border:0;
+line-height:100rpx;
+font-size:0.8rem;
+color:#9D0000;
+background:#fff;
+opacity:0.95;
+margin-right:11%;
+padding:0;
+text-align:right;
+
+}
+button::after{
+border: none;
+}
+@-webkit-keyframes notificationIn {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes notificationIn {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+.wux-notification--in {
+  -webkit-animation: notificationIn .7s;
+          animation: notificationIn .7s;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}

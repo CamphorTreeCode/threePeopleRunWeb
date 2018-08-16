@@ -1,0 +1,169 @@
+/* pages/returnfee/returnfee.wxss */
+
+.header {
+  border-top: 1rpx solid #f2f2f2;
+  padding: 30rpx 40rpx;
+  line-height: 38rpx;
+  font-size: 36rpx;
+  color: #33a1ff;
+}
+
+.header image {
+  float: right;
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.fenlei {
+  border-top:15rpx solid #f2f2f2;
+ height:911rpx; 
+ overflow-y:auto; 
+
+}
+
+.fenlei .leimu {
+  border-bottom: 1rpx solid #f2f2f2;
+  padding: 30rpx;
+}
+
+.fenlei .leimu view {
+  display: inline-block;
+  width: 33.3%;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.fenlei .leibie {
+  padding: 30rpx;
+  padding-bottom: 0rpx;
+}
+
+.fenlei .leibie view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  width: 33.3%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #999;
+}
+
+.fenlei .leibie view text {
+  padding: 0 20rpx;
+}
+
+.fenlei .leibie view:nth-of-type(3) {
+  color: #34a1fe;
+}
+
+.each {
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.each .bottom {
+  padding: 10rpx;
+  padding-left: 68rpx;
+  margin-bottom: 30rpx;
+}
+
+.each .bottom text {
+  margin-right: 31rpx;
+  font-size: 32rpx;
+  color: #ffb82c;
+  border: 1rpx solid #ffb82c;
+  background: #fff6e5;
+  padding: 5rpx 20rpx;
+  border-radius: 10rpx;
+}
+
+scroll-view {
+   line-height: 65rpx; 
+   height: 65rpx; 
+  /* height:911rpx !important; */
+}
+
+.foter {
+  background: white;
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -3px 10px #ccc;
+  padding: 30rpx;
+  height: 100rpx;
+}
+
+.foter>view {
+  display: inline-block;
+  width: 50%;
+  /* height: 100rpx; */
+}
+
+.foter .left, .foter .right {
+  position: relative;
+}
+
+.foter .left view {
+  width: 250rpx;
+  height: 100rpx;
+  background: #33a1ff;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 82%;
+  margin-left: -155rpx;
+  margin-top: -40rpx;
+}
+
+.foter .left image {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  left: 12%;
+  top: 50%;
+  margin-top: -20rpx;
+}
+
+.foter .left text {
+  position: absolute;
+  left: 38%;
+}
+
+.foter .right view {
+  width: 250rpx;
+  height: 100rpx;
+  background: #33a1ff;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 56%;
+  margin-left: -145rpx;
+  margin-top: -40rpx;
+}
+
+.foter .right image {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  right: 10%;
+  top: 50%;
+  margin-top: -20rpx;
+}
+
+.foter .right text {
+  position: absolute;
+  left: 17%;
+}
+.shouye{
+  position: absolute;
+  width: 100rpx !important;
+  height: 100rpx !important;
+  top: -18rpx !important;
+  left: 5% !important;
+}

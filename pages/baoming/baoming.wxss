@@ -1,0 +1,165 @@
+.section {
+  background-color: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+/* 左图标 */
+
+.section image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: text-bottom;
+  margin: 0 10rpx 0 20rpx;
+}
+
+.section input {
+  height: 100%;
+  color: #808080;
+}
+.xingming input,
+.dianhua input {
+  position: absolute;
+  top: 0;
+  left: 23%;
+}
+.dianhua input {
+  left: 32%;
+}
+/* 
+ 电话 
+
+.dianhua input {
+  width: 75%;
+  color: #808080;
+  height: 100%;
+  margin-right: -9%;
+} */
+
+/* 出生日期 */
+
+.section .picker {
+  width: 40%;
+  height: 100rpx;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: 1;
+  color: #999;
+}
+
+.section .you {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+}
+
+/* 家庭住址 */
+
+.address {
+  height: 230rpx;
+  line-height: 20rpx;
+}
+
+.section textarea, .aaa textarea {
+  height: 130rpx;
+  width: 100%;
+  padding: 20rpx 10rpx 10rpx 15rpx;
+  max-width: 720rpx;
+  background-color: #fff;
+  color: #808080;
+}
+
+.aaa textarea {
+  border-bottom: 1rpx solid #f2f2f2;
+  width: 100%;
+  max-width: 100%;
+}
+
+.address image {
+  padding-top: 20rpx;
+}
+
+/* 身份 */
+
+.shenfen {
+  height: 200rpx;
+}
+
+.shenfen input {
+  width: 98%;
+  height: 100rpx;
+  padding-left: 2%; 
+  float: left;
+}
+
+/* 灰色 */
+
+.kong {
+  height: 100rpx;
+  background-color: #ededed;
+}
+
+button {
+  width: 94%;
+  background-color: #33a1ff;
+  color: #fff;
+  padding: 0;
+}
+
+/* 单选框 */
+
+radio-group {
+  /* border: 1rpx solid red; */
+  width: 40%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: right;
+  /* border: 1rpx solid red; */
+}
+
+/* 每一个 */
+
+.flex_item {
+  /* border: 1rpx solid blue; */
+  margin-right: 25rpx;
+  margin-left: 30rpx;
+  float: left;
+  height: 100rpx;
+  width: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.jiankang {
+  width: 100rpx;
+  margin-right: 30rpx;
+  margin-left: 10rpx;
+}
+
+.flex_item label {
+  font-size: 32rpx;
+  color: #ccc;
+}
+
+.flex_item image {
+  padding-top: 0;
+  display: none;
+  width: 25rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 0%;
+  left: 12%;
+}
+
+.flex_item label.active {
+  color: #33a1ff;
+}

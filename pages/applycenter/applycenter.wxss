@@ -1,0 +1,134 @@
+/* pages/applycenter/applycenter.wxss */
+.header{
+  padding: 40rpx;
+  height: 75rpx;
+  border-bottom: 12rpx solid #F2F2F2;
+  border-top: 2rpx solid #F2F2F2;
+  position: relative;
+  line-height: 75rpx;
+}
+.header image{
+  width: 47rpx;
+  height: 55rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -24.5rpx;
+  left: 6%;
+}
+.header text{
+  margin-left: 12%;
+}
+
+.content{
+  position: relative;
+  padding:20rpx 30rpx;
+  font-size: 32rpx;
+   border-bottom:2rpx solid #F2F2F2;
+}
+.content view{
+  margin-top: 10rpx;
+}
+.content view:nth-of-type(2){
+  margin: 20rpx 0;
+}
+.img {
+  color: #999;
+  position: relative;
+}
+.img image{
+  position: absolute;
+  top: 50%;
+  margin-top: -15rpx;
+  left: 0rpx;
+  width: 25rpx;
+  height: 30rpx;
+}
+.img text{
+  margin-left: 35rpx;
+}
+
+.txt text{
+  background:#FEF8D4;
+border:1rpx solid #FFBE36;
+color:#FFBE36;
+  padding: 0rpx 10rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+.price{
+  color: #FE7E41;
+}
+
+.price text{
+ font-weight: 600;
+}
+.content .aw{
+  position: absolute;
+  width: 47rpx;
+  height: 55rpx;
+  right: 10%;
+  top: 35%;
+  margin-top: -22.5rpx;
+}
+.content .tat{
+  position: absolute;
+  height: 55rpx;
+  right: 5.5%;
+  top: 52%;
+   color: #359DFF;
+}
+.content .shixiao {
+  position: absolute;
+  width: 110rpx;
+  height: 55rpx;
+  right: 6%;
+  top: 50%;
+  margin-top: -22.5rpx;
+  color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal-box{
+  position:fixed;
+  width:100%;
+   height:100%; 
+  top:0px;
+  background:rgba(0,0,0,0.4);
+  overflow: hidden;
+  }
+
+/* .modal-body{
+  position:relative;
+  }
+
+.modal-content{
+  margin:0 10% 0 30%;
+  overflow: hidden;
+  border-radius: 10rpx;}
+
+.modal-content{
+  width: 60%;
+  height:150px; 
+}
+.modal-content .fenxiang{
+  width: 100%;
+  height: 40%;
+} */
