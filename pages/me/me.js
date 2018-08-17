@@ -81,7 +81,7 @@ Page({
   },
   dianhua: function(){
     wx.makePhoneCall({
-      phoneNumber: '021-57659081',
+      phoneNumber: '0372-6522110',
     })
   },
   yijian: function(){

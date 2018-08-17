@@ -55,7 +55,7 @@
       </view>
       <view bindtap='sanprice' class='{{xuanze==1?"activeshow":""}}'>
         <image src='/img/center/fanxian.png'></image>
-        奖励金额
+        补贴奖励
       </view>
       <view bindtap='sanzong' class='{{xuanze==2?"activeshow":""}}'>
         <image src='/img/center/zonghe.png'></image>
@@ -82,8 +82,8 @@
           <view>
             <text wx:for='{{item.jobLabels}}' wx:for-item="idx">{{idx}}</text>
           </view>
-          <view>奖励{{item.returnMoney}}</view>
-          <view>{{item.jobSalaryMin}}-{{item.jobSalaryMax}}/月</view>
+          <view>就业补贴{{item.returnMoney}}</view>
+          <view>工资：{{item.jobSalaryMin}}-{{item.jobSalaryMax}}/月</view>
         </view>
       </view>
     </view>
@@ -104,8 +104,8 @@
           <view>
             <text wx:for='{{item.jobLabels}}' wx:for-item="idx">{{idx}}</text>
           </view>
-          <view>奖励{{item.returnMoney}}</view>
-          <view>{{item.jobSalaryMin}}-{{item.jobSalaryMax}}/月</view>
+          <view>就业补贴{{item.returnMoney}}</view>
+          <view>工资：{{item.jobSalaryMin}}-{{item.jobSalaryMax}}/月</view>
         </view>
       </view>
     </view>

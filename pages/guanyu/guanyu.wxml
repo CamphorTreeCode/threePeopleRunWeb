@@ -9,7 +9,7 @@
 <view class='clear'></view> 
 <view class='zhong'>
   <image class='icon' src='/image/gongsi.png'></image>
-  <text>张杰职介</text>
+  <text>三人行人力招聘</text>
 </view>
 <view class='xia'>
   <image class='icon' src='/image/xiangqing.png'></image>

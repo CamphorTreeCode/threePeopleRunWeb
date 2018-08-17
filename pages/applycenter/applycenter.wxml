@@ -23,7 +23,7 @@
     <view class='txt'><text wx:for='{{item.companyJob[0].jobLabels}}' wx:for-item="j">{{j}}</text></view>
     <view class='img'>
       <image src='/img/center/dingwei.png'></image><text>{{item.companyJob[0].company.companyAddress}}</text></view>
-    <view class='price'><text >{{item.companyJob[0].jobSalaryMin}}-{{item.companyJob[0].jobSalaryMax}}</text>/月</view>
+    <view class='price'><text >工资：{{item.companyJob[0].jobSalaryMin}}-{{item.companyJob[0].jobSalaryMax}}</text>/月</view>
 </view>
 <!--没有数据暂无数据  -->
 <view class="spinner cl" hidden='{{showLoading}}'>

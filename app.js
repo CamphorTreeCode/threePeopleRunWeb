@@ -85,7 +85,7 @@ App({
     //用户是否有报名表
     applicantUser: "",
     appId: "wx7786b678789f848c",
-    //  appUrl: "http://localhost/ZhangJie/",
+    //  appUrl: "http://localhost/Srxrl/",
     appUrl: "https://www.zjzj999.com/ZhangJie/",
     homeImg: "https://www.chuanshoucs.com/ServerImg/2018-07-12/4b6715a6-ab08-4a53-a5cf-1d6d81eedea2.jpg",
     applicantContent: '',
