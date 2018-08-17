@@ -1,6 +1,28 @@
 var app = getApp();
 // pages/index/index.js
 
+//公告start
+function findAllHomeNoticeMsg(that){
+  wx.request({
+    url: app.globalData.appUrl + 'WXHomeNotice/findAllHomeNoticeMsg', //仅为示例，并非真实的接口地址
+    method: "GET",
+    header: {
+      'content-type': 'application/x-www-form-urlencoded', // 默认值
+      //'content-type': 'application/json', // 默认值
+      xcxuser_name: "xcxuser_name"
+    },
+    success: function (res) {
+      console.info("下面是首页公告信息：")
+      console.log(res)
+      that.setData({
+        HomeNotice: res.data
+      })
+    }
+  })
+}
+//公告end
+
+
 function getHomeSwiper(that) {
   wx.request({
     url: app.globalData.appUrl + 'WXHomeSwiper/selectHomeSwiperList', //仅为示例，并非真实的接口地址
@@ -335,7 +357,8 @@ Page({
     goodJob: [],
     //首页导航开始
     homeNavigation:[],
-    scene:''
+    scene:'',
+    HomeNotice:[],
   },
 
   /**
@@ -369,6 +392,7 @@ Page({
     });
     //查找轮播图
     getHomeSwiper(this);
+    findAllHomeNoticeMsg(this);
     var ss = 0;
     wx.getSystemInfo({
       success: function(res) {
