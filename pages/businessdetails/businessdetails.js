@@ -18,7 +18,7 @@ Page({
   var that = this
     wx.request({
       url: app.globalData.appUrl + 'WXCompanyJob/selectCompany',
-      data: { companyId: options.companyId},
+      data: { companyId: options.companyId}, 
       header: {
         'content-type': 'application/x-www-form-urlencoded', // 默认值
         xcxuser_name: "xcxuser_name"
