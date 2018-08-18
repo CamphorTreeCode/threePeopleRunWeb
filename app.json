@@ -17,8 +17,7 @@
     "pages/baoming/baoming",
     "pages/yijian/yijian",
     "pages/guanyu/guanyu",
-    "pages/mendian/mendian",
-    "pages/demo/demo"
+    "pages/mendian/mendian"
   ],
   "window":{
     "backgroundTextStyle":"dark",
