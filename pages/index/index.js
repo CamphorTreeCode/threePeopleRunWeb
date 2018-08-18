@@ -38,6 +38,7 @@ function getHomeSwiper(that) {
       that.setData({
         HomeSwiper: res.data
       })
+      
     }
   })
 }
