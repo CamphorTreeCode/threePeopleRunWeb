@@ -359,6 +359,7 @@ Page({
     //首页导航开始
     homeNavigation:[],
     scene:'',
+    notive_image:'https://www.chuanshoucs.com/ServerImg/2018-08-03/5f6b9062-b438-474d-ac90-4881562ff8bc.png',
     HomeNotice:[],
   },
 
