@@ -1,0 +1,8 @@
+<!--pages/announcement/announcement.wxml-->
+<view class='title' wx:for="{{HomeNotice}}">
+    <text>{{item.noticeName}}</text>
+    <view>{{item.noticeContent}}</view>
+    <view class='time'>{{item.noticeCreateTime}}</view>
+</view>
+
+ 

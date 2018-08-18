@@ -1,0 +1,6 @@
+/* pages/announcement/announcement.wxss */
+page{background: #F2F2F2;color: #939393}
+.title{position: relative;background: white;margin-top: 8rpx;padding: 20rpx 0;padding-left: 200rpx;padding-right: 20rpx}
+.title text{position: absolute;top: 30rpx;left: 30rpx;border: 1rpx solid #FE621D; border-radius: 10rpx;padding:0 20rpx;color: #FE621D;font-size: 30rpx}
+.time{text-align: right;margin-top: 50rpx;padding-right: 20rpx}
+

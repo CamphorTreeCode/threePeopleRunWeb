@@ -61,7 +61,7 @@
         <!-- notuive right swiper block start -->
         <block wx:for="{{HomeNotice}}">
           <!-- notuive right swiper block navigator start -->
-          <navigator class='navigator' url="/pages/huiyuan/huiyuan?title={{item.noticeName}}" open-type="navigate">
+          <navigator class='navigator' url="/pages/announcement/announcement?title={{item.noticeName}}" open-type="navigate">
             <!-- notuive right swiper block navigator swiper-item start -->
             <swiper-item class="swiper-item">
               <!-- notuive right swiper block navigator swiper-item notive_right_lable start -->

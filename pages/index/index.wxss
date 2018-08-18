@@ -544,7 +544,7 @@ Page {
 .notive {
   width: 100%;
   height: 100rpx;
-  padding: 10rpx 20rpx;
+  padding: 5rpx 20rpx;
   display: flex;
   font-size: 25rpx;
   margin-bottom: 12rpx;
@@ -566,13 +566,15 @@ Page {
 
 .swiper_container {
   flex: 6;
-  height: 80rpx;
+  height: 90rpx;
   overflow: hidden;
 }
 
 .swiper-item {
   display: flex;
   align-items: center;
+  padding: 2rpx 0;
+  box-sizing: border-box;
 }
 
 .notive_right_lable text {
