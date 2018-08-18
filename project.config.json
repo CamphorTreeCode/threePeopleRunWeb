@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 13,
+			"current": 14,
 			"list": [
 				{
 					"id": -1,
@@ -117,6 +117,12 @@
 					"id": 13,
 					"name": "2",
 					"pathName": "pages/shenqing/shenqing",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "demo",
+					"pathName": "pages/demo/demo",
 					"query": ""
 				}
 			]
