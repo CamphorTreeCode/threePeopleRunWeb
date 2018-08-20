@@ -88,7 +88,7 @@ App({
     //  appUrl: "http://localhost/Srxrl/",
     // appUrl: "https://www.zjzj999.com/ZhangJie/",
     appUrl: "https://www.srxrl.com/Srxrl/",
-    homeImg: "https://www.chuanshoucs.com/ServerImg/2018-08-03/5b7f41e2-3be9-4fc5-a03c-2c831920a549.jpg",
+    homeImg: "https://www.chuanshoucs.com/ServerImg/2018-08-03/2a637c21-3474-4359-9e0f-4d50192406f7.jpg",
     applicantContent: '',
     collectionContent: '',
     homeNavigation:'',

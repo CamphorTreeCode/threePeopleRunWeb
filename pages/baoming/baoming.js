@@ -28,12 +28,12 @@ function yanzheng(applicantList) {
     }
   }
   if (applicantList.applicantIDCardNo == '') {
-    wx.showToast({
-      title: '请填写身份证号码',
-      icon: 'none',
-      duration: 2000
-    })
-    return false;
+    // wx.showToast({
+    //   title: '请填写身份证号码',
+    //   icon: 'none',
+    //   duration: 2000
+    // })
+    return true;
   } else {
     if (!/^[1-9]{1}[0-9]{14}$|^[1-9]{1}[0-9]{16}([0-9]|[xX])$/.test(applicantList.applicantIDCardNo)) {
       wx.showToast({
