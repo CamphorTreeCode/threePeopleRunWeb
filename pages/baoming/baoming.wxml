@@ -53,8 +53,8 @@
   </view>
   <view class='section shenfen'>
     <image src='/image/shenfen.png'></image>
-    <text>身份证号</text>
-    <input type='text' placeholder='填写你的身份证号(必填)' name='applicantIDCardNo' value='{{applicantList.applicantIDCardNo}}'></input>
+    <text>身份证号(选填)</text>
+    <input type='text' placeholder='填写你的身份证号(选填)' name='applicantIDCardNo' value='{{applicantList.applicantIDCardNo}}'></input>
   </view>
   <!-- <view class='section dianhua'>
     <image src='/image/zhengzhi.png'></image>
