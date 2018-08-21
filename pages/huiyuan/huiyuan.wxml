@@ -3,7 +3,7 @@
 </my-component>
 <!--遮罩-->
 <view class='shang' >
-  <image src='https://www.chuanshoucs.com/ServerImg/2018-05-28/dc2b1393-fba9-4dff-9484-06d4d512ef3e.png'></image>
+  <image src='https://www.chuanshoucs.com/ServerImg/2018-08-03/c0ce188c-dc8b-42f4-a0d0-4bfe669495bb.png'></image>
 </view>
  <view class='zhong'>
   <image src='/image/huiyuan.png'></image>
