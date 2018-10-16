@@ -586,7 +586,7 @@ Page({
    */
   onShareAppMessage: function() {
     return {
-      title:"点我“解毒”赚钱的正确姿势！！",
+      title:"我在这里报名了，快来看！",
       imageUrl: app.globalData.homeImg
 
     }
