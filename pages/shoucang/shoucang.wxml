@@ -13,7 +13,15 @@
         <image src='/image/dingwei.png'></image>
         <text>{{item.companyJob[0].company.companyAddress}}</text>
     </view>
-    <view class='four'>工资：{{item.companyJob[0].jobSalaryMin}}-{{item.companyJob[0].jobSalaryMax}}/月</view>
+    <block wx:if="{{item.companyJob[0].jobType == 0}}">
+      <view class='four'>{{item.companyJob[0].jobSalaryMin}}-{{item.companyJob[0].jobSalaryMax}}/月</view>
+    </block>
+     <block wx:elif="{{item.companyJob[0].jobType == 1 && item.companyJob[0].jobSalaryMax != 0}}">
+      <view class='four'>{{item.companyJob[0].jobSalaryMax}}/天</view>
+    </block>
+     <block wx:elif="{{item.companyJob[0].jobType == 1 && item.companyJob[0].jobSalaryMin != 0}}">
+      <view class='four'>{{item.companyJob[0].jobSalaryMin}}/小时</view>
+    </block>
     <button catchtap="baoming" data-index="{{index}}" data-id="{{item.companyJobId}}">{{item.isCollection==0?'去报名':'已报名'}}</button>
   </view>
   <view class='yincang' catchtap='quxiao' data-index="{{index}}" data-collectionId="{{item.collectionId}}">

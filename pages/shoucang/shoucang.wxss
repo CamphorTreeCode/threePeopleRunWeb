@@ -81,3 +81,68 @@ button {
  -webkit-transform: translateX(0);
  transform: translateX(0);
 }
+
+/*****************************************************/
+.Choice{
+width: 90%;
+height: 90%;
+background-color: white;
+position: fixed;
+top: 5%;
+left: 5%;
+z-index: 99;
+border-radius: 10rpx;
+}
+.Choice .titlechoic{
+margin-top: 50rpx;
+display: block;
+width: 90%;
+margin-left: 5%;
+padding-bottom: 20rpx;
+text-align: center;
+font-size:34rpx;
+border-bottom: 1rpx solid #E8E8E8;
+}
+.Choiceopt{
+position: relative;
+display: flex !important;
+align-items: center;
+width: 90%;
+margin-left: 5%;
+padding: 20rpx 0;
+border-bottom: 1rpx solid #E8E8E8;
+}
+.Choiceopt .imgleft{
+width: 100rpx;
+height: 100rpx;
+border-radius: 50%;
+}
+.Choiceopt text{
+display: block;
+margin-left: 30rpx;
+font-size:34rpx;
+color: #333;
+}
+.Choiceopt .imgright{
+width: 40rpx;
+height: 40rpx;
+position: absolute;
+right: 0;
+}
+.Choicecontent{
+width: 100%;
+height: 75%;
+overflow-y: auto
+}
+.Choicebottom{
+margin-top: 35rpx;
+width: 100%;
+text-align: center;
+}
+.Choicecanle{
+display: inline-block;
+background-color: #00B4FF;
+color: white;
+padding: 20rpx 50rpx;
+border-radius: 50rpx;
+}

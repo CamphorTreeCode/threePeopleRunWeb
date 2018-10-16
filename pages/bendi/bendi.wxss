@@ -250,3 +250,10 @@ background: rgba(0, 0, 0, 0.5);
   width: 100rpx;
   height: 100rpx
 }
+
+.jobType {
+  color: #2096FE !important;
+  border: 1rpx solid #2096FE !important;
+  background-color: #fff !important;
+  float: right;
+}

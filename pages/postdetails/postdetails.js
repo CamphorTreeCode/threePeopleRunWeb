@@ -84,7 +84,13 @@ Page({
     userImg: '',
     jobImage: '',
     filePath: [],
-    formId:''
+    formId:'',
+    //所有店铺信息
+    AllAdmin:[],
+    //店铺appId
+    appId:'',
+    //去报名弹窗
+    QBM:true,
   },
   /**
    * 生命周期函数--监听页面加载
@@ -256,13 +262,46 @@ Page({
         that.setData({
           browser: res.data
         })
-
       }
-
-
-
     })
     // 查询用户的浏览数 end
+
+    //查询全部店铺start
+    wx.request({
+      url: app.globalData.appUrl + 'WXSlaveUser/findAllAdmin', //仅为示例，并非真实的接口地址
+      method: "get",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded', // 默认值
+        //'content-type': 'application/json', // 默认值
+        xcxuser_name: "xcxuser_name"
+      },
+      success: function (res) {
+        console.info("下面是查询总账号信息:")
+        console.log(res)
+        res.data[0].shopName = "三人行人力招聘总店";
+        console.info(res.data);
+        var admin = res.data;
+        wx.request({
+          url: app.globalData.appUrl + 'WXSlaveUser/findAllSlaveUser', //仅为示例，并非真实的接口地址
+          method: "get",
+          header: {
+            'content-type': 'application/x-www-form-urlencoded', // 默认值
+            //'content-type': 'application/json', // 默认值
+            xcxuser_name: "xcxuser_name"
+          },
+          success: function (res) {
+            console.info("下面是查询子账号信息:")
+            console.log(res)
+            var AllAdmin = admin.concat(res.data);
+            console.info(AllAdmin)
+            that.setData({
+              AllAdmin: AllAdmin,
+            })
+          }
+        })
+      }
+    })
+    //查询全部店铺end
   },
 
   /**
@@ -754,14 +793,35 @@ Page({
     })
   },
   // 去报名 取消按钮
-  Bquxiao: function() {
+  Bquxiao: function () {
+    this.setData({
+      QBM: true,
+      gao: 0
+    })
+  },
+
+  //选择店铺取消按钮
+  DPquxiao: function () {
     this.setData({
       xinxi: 3,
       gao: 0
     })
   },
+
+  //选择店铺 
+  DPChoose: function (e) {
+    console.info("选择店铺")
+    console.info(e)
+    this.setData({
+      appId: e.currentTarget.dataset.appid,
+      xinxi: 3,
+      gao: 1,
+      QBM: false,
+    })
+  },
+
   // 去报名 确认按钮
-  Bqueren: function(e) {
+  Bqueren: function (e) {
     var that = this;
     //用户报名岗位
     console.info(e)
@@ -780,15 +840,16 @@ Page({
       data: {
         companyJobId: e.currentTarget.dataset.id,
         openId: openId,
-        applicantContent: applicantContent
+        applicantContent: applicantContent,
+        appId: that.data.appId,
       },
       method: "post",
       header: {
         'content-type': 'application/x-www-form-urlencoded', // 默认值
         xcxuser_name: "xcxuser_name"
       },
-      success: function(res) {
-        setTimeout(function() {
+      success: function (res) {
+        setTimeout(function () {
           that.setData({
             isApplicant: true,
           })
@@ -826,10 +887,10 @@ Page({
     }
     that.setData({
       hidden: that.data.hidden,
-      xinxi: 3,
+      QBM: true,
       gao: 0
     })
-    setTimeout(function() {
+    setTimeout(function () {
       that.setData({
         hidden: true
       })

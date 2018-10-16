@@ -105,7 +105,23 @@
             <text wx:for='{{item.jobLabels}}' wx:for-item="idx">{{idx}}</text>
           </view>
           <view>就业补贴{{item.returnMoney}}</view>
-          <view>工资：{{item.jobSalaryMin}}-{{item.jobSalaryMax}}/月</view>
+          <block wx:if="{{item.jobType == 0}}">
+            <view>
+              {{item.jobSalaryMin}}-{{item.jobSalaryMax}}/月
+            </view>
+          </block>
+          <block wx:elif="{{item.jobType == 1 && item.jobSalaryMax != 0}}">
+            <view>
+              {{item.jobSalaryMax}}/天
+              <text class='jobType'>临时工</text>
+            </view>
+          </block>
+          <block wx:elif="{{item.jobType == 1 && item.jobSalaryMin != 0}}">
+            <view>
+              {{item.jobSalaryMin}}/小时
+              <text class='jobType'>临时工</text>
+            </view>
+          </block>
         </view>
       </view>
     </view>

@@ -421,6 +421,13 @@ swiper-container {
   overflow: hidden;
 }
 
+.jobType {
+  color: #2096FE !important;
+  border: 1rpx solid #2096FE !important;
+  background-color: #fff !important;
+  float: right;
+}
+
 .danchuang image {
   width: 100rpx;
   height: 100rpx;
